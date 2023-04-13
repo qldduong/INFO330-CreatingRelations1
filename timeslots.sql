@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-CREATE TABLE IF NOT EXISTS student_courses(add_count INTEGER PRIMARY KEY NOT NULL, studentid INT, 
-
-
-
-
--------------------------
-
 -- Creating the timeslots table
 CREATE TABLE IF NOT EXISTS timeslots(id INT PRIMARY KEY NOT NULL, start TIME, end TIME, CHECK (end > start)); 
 
