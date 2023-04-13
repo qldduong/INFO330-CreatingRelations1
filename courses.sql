@@ -1,7 +1,7 @@
 -- Creating the courses table
 
 -- Added a checks to make sure the id field is not null + to make sure the table doesn't already exist for the sake of good practice
-CREATE TABLE IF NOT EXISTS courses(code varchar(40) PRIMARY KEY NOT NULL, start DATE NOT NULL, end DATE NOT NULL CHECK (end > start), description VARCHAR(400));
+CREATE TABLE IF NOT EXISTS courses(code varchar(40) PRIMARY KEY NOT NULL CHECK (length(code) >= 7), start DATE NOT NULL, end DATE NOT NULL CHECK (end > start), description VARCHAR(400));
 
 -- Inserting data into the courses table
 INSERT INTO courses VALUES('INFO330A', '2023-04-01', '2023-06-01', 'Data and databases');
